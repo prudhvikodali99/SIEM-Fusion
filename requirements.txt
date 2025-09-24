@@ -1,0 +1,22 @@
+# Essential packages for SIEM-Fusion with FREE Gemini
+fastapi
+uvicorn
+pydantic
+sqlalchemy
+requests
+pyyaml
+google-generativeai
+jinja2
+aiofiles
+python-multipart
+pymysql
+psutil
+websockets
+asyncio-mqtt
+python-dateutil
+dash
+dash-bootstrap-components
+plotly
+pandas
+cryptography
+pathlib

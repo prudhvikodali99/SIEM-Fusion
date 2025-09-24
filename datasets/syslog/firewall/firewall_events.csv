@@ -1,0 +1,50 @@
+timestamp,facility,severity,hostname,process,message,src_ip,dst_ip,src_port,dst_port,protocol,action,rule_id,bytes_in,bytes_out,session_id,interface,zone_src,zone_dst,threat_type,signature_id
+2024-01-20 08:15:00,16,6,firewall-01,kernel,Connection established,192.168.1.100,203.0.113.50,49152,80,TCP,ALLOW,100,0,1024,12345,eth0,LAN,WAN,None,0
+2024-01-20 08:15:05,16,4,firewall-01,kernel,Suspicious port scan detected,203.0.113.100,192.168.1.0,0,0,TCP,BLOCK,201,0,0,0,eth1,WAN,LAN,Port Scan,10001
+2024-01-20 08:15:10,16,6,firewall-01,kernel,DNS query allowed,192.168.1.101,8.8.8.8,53241,53,UDP,ALLOW,101,64,128,12346,eth0,LAN,WAN,None,0
+2024-01-20 08:15:15,16,3,firewall-01,kernel,Malware communication blocked,192.168.1.150,198.51.100.25,49153,8080,TCP,BLOCK,301,0,0,0,eth0,LAN,WAN,Malware C&C,20001
+2024-01-20 08:15:20,16,6,firewall-01,kernel,HTTPS connection established,192.168.1.102,172.16.0.50,49154,443,TCP,ALLOW,102,0,2048,12347,eth0,LAN,DMZ,None,0
+2024-01-20 08:15:25,16,4,firewall-01,kernel,Brute force attack detected,203.0.113.200,192.168.1.10,0,22,TCP,BLOCK,202,0,0,0,eth1,WAN,LAN,Brute Force,10002
+2024-01-20 08:15:30,16,6,firewall-01,kernel,Email traffic allowed,192.168.1.103,172.16.0.25,49155,25,TCP,ALLOW,103,512,1024,12348,eth0,LAN,DMZ,None,0
+2024-01-20 08:15:35,16,2,firewall-01,kernel,DDoS attack in progress,198.51.100.100,192.168.1.0,0,80,TCP,BLOCK,401,0,0,0,eth1,WAN,LAN,DDoS,30001
+2024-01-20 08:15:40,16,6,firewall-01,kernel,FTP connection established,192.168.1.104,172.16.0.75,49156,21,TCP,ALLOW,104,0,512,12349,eth0,LAN,DMZ,None,0
+2024-01-20 08:15:45,16,4,firewall-01,kernel,SQL injection attempt blocked,203.0.113.150,192.168.1.200,49157,1433,TCP,BLOCK,203,0,0,0,eth1,WAN,LAN,SQL Injection,10003
+2024-01-20 08:15:50,16,6,firewall-01,kernel,VPN connection established,10.0.0.50,192.168.1.105,1723,1723,TCP,ALLOW,105,0,4096,12350,tun0,VPN,LAN,None,0
+2024-01-20 08:15:55,16,3,firewall-01,kernel,Botnet communication detected,192.168.1.175,172.16.0.100,49158,6667,TCP,BLOCK,302,0,0,0,eth0,LAN,WAN,Botnet,20002
+2024-01-20 08:16:00,16,6,firewall-01,kernel,Web browsing allowed,192.168.1.106,203.0.113.75,49159,80,TCP,ALLOW,106,1024,8192,12351,eth0,LAN,WAN,None,0
+2024-01-20 08:16:05,16,4,firewall-01,kernel,Cross-site scripting blocked,203.0.113.175,192.168.1.201,49160,80,TCP,BLOCK,204,0,0,0,eth1,WAN,LAN,XSS Attack,10004
+2024-01-20 08:16:10,16,6,firewall-01,kernel,SSH connection allowed,192.168.1.107,172.16.0.100,49161,22,TCP,ALLOW,107,256,512,12352,eth0,LAN,DMZ,None,0
+2024-01-20 08:16:15,16,2,firewall-01,kernel,Ransomware traffic detected,192.168.1.180,198.51.100.200,49162,443,TCP,BLOCK,402,0,0,0,eth0,LAN,WAN,Ransomware,30002
+2024-01-20 08:16:20,16,6,firewall-01,kernel,Database connection allowed,192.168.1.108,172.16.0.150,49163,3306,TCP,ALLOW,108,512,1024,12353,eth0,LAN,DMZ,None,0
+2024-01-20 08:16:25,16,4,firewall-01,kernel,Buffer overflow attempt,203.0.113.225,192.168.1.202,49164,80,TCP,BLOCK,205,0,0,0,eth1,WAN,LAN,Buffer Overflow,10005
+2024-01-20 08:16:30,16,6,firewall-01,kernel,SNMP query allowed,192.168.1.109,172.16.0.200,49165,161,UDP,ALLOW,109,128,256,12354,eth0,LAN,DMZ,None,0
+2024-01-20 08:16:35,16,3,firewall-01,kernel,Trojan horse communication,192.168.1.185,203.0.113.100,49166,8080,TCP,BLOCK,303,0,0,0,eth0,LAN,WAN,Trojan,20003
+2024-01-20 08:16:40,16,6,firewall-01,kernel,NTP synchronization allowed,192.168.1.110,172.16.0.25,49167,123,UDP,ALLOW,110,64,64,12355,eth0,LAN,DMZ,None,0
+2024-01-20 08:16:45,16,4,firewall-01,kernel,Directory traversal blocked,203.0.113.250,192.168.1.203,49168,80,TCP,BLOCK,206,0,0,0,eth1,WAN,LAN,Directory Traversal,10006
+2024-01-20 08:16:50,16,6,firewall-01,kernel,LDAP query allowed,192.168.1.111,172.16.0.75,49169,389,TCP,ALLOW,111,256,512,12356,eth0,LAN,DMZ,None,0
+2024-01-20 08:16:55,16,2,firewall-01,kernel,Advanced persistent threat,198.51.100.150,192.168.1.0,0,443,TCP,BLOCK,403,0,0,0,eth1,WAN,LAN,APT,30003
+2024-01-20 08:17:00,16,6,firewall-01,kernel,Telnet connection allowed,192.168.1.112,172.16.0.125,49170,23,TCP,ALLOW,112,128,256,12357,eth0,LAN,DMZ,None,0
+2024-01-20 08:17:05,16,4,firewall-01,kernel,Command injection attempt,203.0.113.175,192.168.1.204,49171,22,TCP,BLOCK,207,0,0,0,eth1,WAN,LAN,Command Injection,10007
+2024-01-20 08:17:10,16,6,firewall-01,kernel,IMAP connection established,192.168.1.113,172.16.0.50,49172,143,TCP,ALLOW,113,512,1024,12358,eth0,LAN,DMZ,None,0
+2024-01-20 08:17:15,16,3,firewall-01,kernel,Spyware communication blocked,192.168.1.190,172.16.0.200,49173,8443,TCP,BLOCK,304,0,0,0,eth0,LAN,WAN,Spyware,20004
+2024-01-20 08:17:20,16,6,firewall-01,kernel,POP3 connection allowed,192.168.1.114,172.16.0.75,49174,110,TCP,ALLOW,114,256,512,12359,eth0,LAN,DMZ,None,0
+2024-01-20 08:17:25,16,4,firewall-01,kernel,XML injection blocked,203.0.113.200,192.168.1.205,49175,80,TCP,BLOCK,208,0,0,0,eth1,WAN,LAN,XML Injection,10008
+2024-01-20 08:17:30,16,6,firewall-01,kernel,SMTP connection established,192.168.1.115,172.16.0.100,49176,587,TCP,ALLOW,115,1024,2048,12360,eth0,LAN,DMZ,None,0
+2024-01-20 08:17:35,16,2,firewall-01,kernel,Zero-day exploit detected,198.51.100.175,192.168.1.206,49177,445,TCP,BLOCK,404,0,0,0,eth1,WAN,LAN,Zero-day,30004
+2024-01-20 08:17:40,16,6,firewall-01,kernel,RDP connection allowed,192.168.1.116,172.16.0.150,49178,3389,TCP,ALLOW,116,2048,4096,12361,eth0,LAN,DMZ,None,0
+2024-01-20 08:17:45,16,4,firewall-01,kernel,LDAP injection attempt,203.0.113.225,192.168.1.207,49179,389,TCP,BLOCK,209,0,0,0,eth1,WAN,LAN,LDAP Injection,10009
+2024-01-20 08:17:50,16,6,firewall-01,kernel,SIP call established,192.168.1.117,172.16.0.200,49180,5060,UDP,ALLOW,117,512,1024,12362,eth0,LAN,DMZ,None,0
+2024-01-20 08:17:55,16,3,firewall-01,kernel,Adware traffic detected,192.168.1.195,203.0.113.125,49181,80,TCP,BLOCK,305,0,0,0,eth0,LAN,WAN,Adware,20005
+2024-01-20 08:18:00,16,6,firewall-01,kernel,TFTP transfer allowed,192.168.1.118,172.16.0.25,49182,69,UDP,ALLOW,118,1024,2048,12363,eth0,LAN,DMZ,None,0
+2024-01-20 08:18:05,16,4,firewall-01,kernel,Path traversal blocked,203.0.113.250,192.168.1.208,49183,21,TCP,BLOCK,210,0,0,0,eth1,WAN,LAN,Path Traversal,10010
+2024-01-20 08:18:10,16,6,firewall-01,kernel,RADIUS authentication,192.168.1.119,172.16.0.75,49184,1812,UDP,ALLOW,119,256,512,12364,eth0,LAN,DMZ,None,0
+2024-01-20 08:18:15,16,2,firewall-01,kernel,Cryptocurrency mining detected,192.168.1.200,198.51.100.100,49185,8333,TCP,BLOCK,405,0,0,0,eth0,LAN,WAN,Crypto Mining,30005
+2024-01-20 08:18:20,16,6,firewall-01,kernel,Syslog transmission allowed,192.168.1.120,172.16.0.100,49186,514,UDP,ALLOW,120,512,1024,12365,eth0,LAN,DMZ,None,0
+2024-01-20 08:18:25,16,4,firewall-01,kernel,File inclusion attack,203.0.113.175,192.168.1.209,49187,80,TCP,BLOCK,211,0,0,0,eth1,WAN,LAN,File Inclusion,10011
+2024-01-20 08:18:30,16,6,firewall-01,kernel,DHCP request allowed,192.168.1.121,172.16.0.1,68,67,UDP,ALLOW,121,256,512,12366,eth0,LAN,DMZ,None,0
+2024-01-20 08:18:35,16,3,firewall-01,kernel,Keylogger communication,192.168.1.205,172.16.0.150,49188,443,TCP,BLOCK,306,0,0,0,eth0,LAN,WAN,Keylogger,20006
+2024-01-20 08:18:40,16,6,firewall-01,kernel,ICMP ping allowed,192.168.1.122,172.16.0.200,0,0,ICMP,ALLOW,122,64,64,12367,eth0,LAN,DMZ,None,0
+2024-01-20 08:18:45,16,4,firewall-01,kernel,Session hijacking attempt,203.0.113.200,192.168.1.210,49189,80,TCP,BLOCK,212,0,0,0,eth1,WAN,LAN,Session Hijacking,10012
+2024-01-20 08:18:50,16,6,firewall-01,kernel,BGP update allowed,192.168.1.123,172.16.0.1,49190,179,TCP,ALLOW,123,512,1024,12368,eth0,LAN,DMZ,None,0
+2024-01-20 08:18:55,16,2,firewall-01,kernel,Rootkit activity detected,192.168.1.210,198.51.100.200,49191,80,TCP,BLOCK,406,0,0,0,eth0,LAN,WAN,Rootkit,30006
+2024-01-20 08:19:00,16,6,firewall-01,kernel,OSPF hello allowed,192.168.1.124,172.16.0.25,0,0,OSPF,ALLOW,124,128,128,12369,eth0,LAN,DMZ,None,0

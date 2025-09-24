@@ -1,0 +1,74 @@
+siem_fusion:
+  # Data Collection Configuration
+  data_collector:
+    syslog:
+      enabled: true
+      port: 514
+      host: "0.0.0.0"
+    mysql:
+      enabled: true
+      host: "localhost"
+      port: 3306
+      database: "security_logs"
+      username: "siem_user"
+      password: "secure_password"
+    windows_events:
+      enabled: true
+      log_types: ["Security", "System", "Application"]
+  
+  # LLM Configuration - FREE GEMINI MODELS
+  llm_models:
+    anomaly_detection:
+      provider: "gemini"
+      model: "gemini-1.5-flash"  # FREE: Fast processing for anomaly detection
+      temperature: 0.1
+      max_tokens: 1000
+    threat_intelligence:
+      provider: "gemini"
+      model: "gemini-1.5-pro"    # FREE: High intelligence for threat analysis
+      temperature: 0.0
+      max_tokens: 1500
+    contextual_correlation:
+      provider: "gemini"
+      model: "gemini-1.5-pro"    # FREE: Best reasoning for correlation
+      temperature: 0.2
+      max_tokens: 2000
+    alert_generation:
+      provider: "gemini"
+      model: "gemini-1.5-flash"  # FREE: Fast alert generation
+      temperature: 0.1
+      max_tokens: 1000
+  
+  # API Keys (Set via environment variables)
+  api_keys:
+    # FREE GEMINI API KEY - Get from: https://aistudio.google.com/app/apikey
+    gemini_api_key: "${GEMINI_API_KEY}"
+    
+    # PAID KEYS (Optional - commented out since using free Gemini)
+    # openai_api_key: "${OPENAI_API_KEY}"
+    # anthropic_api_key: "${ANTHROPIC_API_KEY}"
+  
+  # Processing Configuration
+  processing:
+    batch_size: 100
+    processing_interval: 30  # seconds
+    alert_threshold: 0.7
+    max_concurrent_llm_calls: 5
+  
+  # Dashboard Configuration
+  dashboard:
+    host: "0.0.0.0"
+    port: 8080
+    refresh_interval: 10  # seconds
+    max_alerts_display: 50
+  
+  # Database Configuration
+  database:
+    url: "sqlite:///siem_fusion.db"
+    # For production, use: "postgresql://user:password@localhost/siem_fusion"
+  
+  # Redis Configuration (for caching and task queue)
+  redis:
+    host: "localhost"
+    port: 6379
+    db: 0
